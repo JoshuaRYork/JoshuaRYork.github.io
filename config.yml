@@ -49,7 +49,7 @@ params:
           enabled: true
           title: Joshua York
           subtitle: "Assistant professor of economics at Grand Valley State University."
-          imageUrl: image.jpeg
+          imageUrl: HS_GVSU_HiRes.jpeg
           imageWidth: 160
           imageHeight: 160
           buttons:
