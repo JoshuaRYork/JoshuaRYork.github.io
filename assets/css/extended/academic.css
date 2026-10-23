@@ -96,7 +96,7 @@ body {
 }
 
 #menu .active {
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--link);
     padding-bottom: 4px;
     font-weight: 600;
 }
@@ -339,8 +339,9 @@ a.sidebar-icon:hover {
     padding: 0;
 }
 
-.papers {
-    max-width: 1150px;
+/* Papers fill the full width beside the sidebar, with a tighter gap */
+.page-layout:has(.papers) {
+    gap: 24px;
 }
 
 .papers section + section {
@@ -369,19 +370,41 @@ a.sidebar-icon:hover {
     margin-bottom: 0;
 }
 
+/* Single line spacing throughout the paper list */
 .post-content .papers h3 {
     margin: 0;
     color: var(--content);
     font-size: 21.6px;
     font-weight: 600;
-    line-height: 1.45;
+    line-height: 1.2;
 }
 
 .post-content .papers p {
     margin: 6px 0 0;
     color: #626b75;
     font-size: 18.8px;
-    line-height: 1.65;
+    line-height: 1.2;
+}
+
+/* Abstracts shown in full under each paper */
+.post-content .papers p.abstract {
+    margin-top: 10px;
+    color: var(--content);
+    font-size: 16.5px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Download links and status lines sit below the abstract, at the abstract's size */
+.post-content .papers p.abstract + p {
+    margin-top: 10px;
+    font-size: 16.5px;
+}
+
+@media screen and (max-width: 768px) {
+    .post-content .papers p.abstract {
+        text-align: left;
+    }
 }
 
 /* ---------- Footer ---------- */
