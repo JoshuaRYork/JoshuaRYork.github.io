@@ -1,0 +1,293 @@
+/* Academic layout: top nav bar + left sidebar, modeled on academicpages.github.io.
+   Font and colors follow kylebutts.com; boxed entries follow weizhang-econ.github.io.
+   Loaded after the theme CSS, so these rules override PaperMod's defaults. */
+
+:root {
+    --theme: #ffffff;
+    --entry: #ffffff;
+    --primary: #27272a;
+    --content: #18181b;
+    --secondary: #52525b;
+    --tertiary: #e4e4e7;
+    --border: #e5e7eb;
+    --page-bg: #f5f5f5;
+    --code-bg: #f4f4f5;
+    --accent: #b3114b;
+    --link: #27272a;
+    --link-underline: #a1a1aa;
+    --link-hover: var(--accent);
+    --site-width: 1100px;
+    --sidebar-width: 200px;
+    --main-width: 760px;
+    --header-height: 64px;
+    --textsize: 17px;
+    --h1size: 28px;
+    --headersize: 17px;
+    --lineheight: 1.6;
+}
+
+body,
+.list {
+    font-family: "Libertinus Serif", "Linux Libertine", Georgia, serif;
+    color: var(--content);
+    background: var(--page-bg);
+}
+
+/* White boxes for page content and list entries, as on weizhang-econ.github.io */
+.post-single,
+.post-entry,
+.main > .post-content {
+    background: var(--theme);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 28px;
+}
+
+/* Bold text in content doubles as keyword highlighting */
+.post-content strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ---------- Top navigation bar ---------- */
+
+.header {
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    max-width: var(--site-width);
+    margin: 0 auto;
+    background: none;
+    line-height: var(--header-height);
+}
+
+.logo a {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+#menu a {
+    color: var(--content);
+}
+
+#menu a:hover {
+    color: var(--accent);
+}
+
+#menu .active {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+    font-weight: 600;
+}
+
+/* ---------- Sidebar + content layout ---------- */
+
+.page-layout {
+    display: flex;
+    gap: 40px;
+    max-width: var(--site-width);
+    margin: 0 auto;
+    padding: 32px var(--gap) 0;
+}
+
+.sidebar {
+    flex: 0 0 var(--sidebar-width);
+    align-self: flex-start;
+    position: sticky;
+    top: 24px;
+}
+
+.sidebar-avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    padding: 4px;
+    margin-bottom: 16px;
+}
+
+.sidebar-name {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.sidebar-bio {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 16px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.sidebar-links li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sidebar-links a {
+    display: flex;
+    align-items: center;
+    color: var(--content);
+}
+
+.sidebar-links a:hover span {
+    text-decoration: underline;
+}
+
+.sidebar-links svg {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin-inline-end: 8px;
+    color: var(--secondary);
+}
+
+.main {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: var(--main-width);
+    margin: 0;
+    padding: 0;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 32px);
+}
+
+/* ---------- Page content ---------- */
+
+.post-header,
+.page-header {
+    margin: 0 0 24px;
+}
+
+.post-title,
+.page-header h1 {
+    font-size: var(--h1size);
+    font-weight: 600;
+    color: var(--primary);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content a,
+.page-header a,
+.footer a {
+    color: var(--link);
+    box-shadow: none;
+    text-decoration: underline;
+    text-decoration-color: var(--link-underline);
+    text-underline-offset: 3px;
+}
+
+.post-content a:hover,
+.footer a:hover {
+    color: var(--link-hover);
+    text-decoration-color: currentColor;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5 {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Section headings get an accent bar on the left, as on kylebutts.com */
+.post-content h2,
+.post-content h4,
+.post-content h5 {
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    margin-left: -15px;
+}
+
+/* Paper pages separate sections with <hr>; the accent bars make them redundant */
+.post-content hr {
+    display: none;
+}
+
+/* Research/teaching lists: one box per paper or course */
+.post-entry {
+    margin-bottom: 20px;
+}
+
+.post-entry:hover {
+    transform: none;
+    border-color: var(--link-underline);
+}
+
+.entry-header h2 {
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.post-entry:hover .entry-header h2 {
+    color: var(--accent);
+}
+
+.entry-content,
+.entry-footer {
+    color: var(--secondary);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    max-width: none;
+    margin-top: 48px;
+    padding: 20px var(--gap);
+    background: var(--theme);
+    border-top: 1px solid var(--border);
+    color: var(--secondary);
+    text-align: left;
+}
+
+/* ---------- Phones and small tablets ---------- */
+
+@media screen and (max-width: 768px) {
+    .page-layout {
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 20px;
+    }
+
+    .sidebar {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-basis: auto;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-avatar {
+        width: 88px;
+        height: 88px;
+        margin-bottom: 0;
+    }
+
+    .sidebar-links li {
+        margin-bottom: 4px;
+    }
+
+    .main {
+        max-width: 100%;
+    }
+
+    .nav {
+        line-height: 48px;
+    }
+}

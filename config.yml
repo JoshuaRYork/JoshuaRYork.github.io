@@ -45,26 +45,25 @@ params:
     UseHugoToc: true
     comments: false
     math: true
-    profileMode:
-          enabled: true
-          title: Joshua York
-          subtitle: "Assistant professor of economics at Grand Valley State University."
-          imageUrl: HS_GVSU_HiRes.jpeg
-          imageWidth: 160
-          imageHeight: 160
-          buttons:
-            - name: CV
-              url: cv/
-            - name: Research
-              url: research/
-            - name: Teaching
-              url: teaching/
+    # Left sidebar shown on every page (layouts/partials/sidebar.html)
+    sidebar:
+          name: Joshua York
+          bio: "Assistant Professor of Economics, Grand Valley State University"
+          imageUrl: HS_GVSU_HiRes.jpg
 
+    # Sidebar contact links: name picks the icon (see layouts/partials/svg.html), title is the label
     socialIcons:
-        - name: CV
-          url: cvweb.pdf
+        - name: Location
+          title: SCB 3120, Seidman College of Business
         - name: Email
+          title: yorkj1@gvsu.edu
           url: mailto:yorkj1@gvsu.edu
+        - name: X
+          title: "@Joshua_R_York"
+          url: https://x.com/Joshua_R_York
+        - name: CV
+          title: CV (PDF)
+          url: CVweb.pdf
         # - name: Zoom
           # url: https://www.zoom.us/my/user
         # - name: Location
@@ -91,8 +90,6 @@ params:
         hiddenInSingle: true
     label:
       text: Joshua York
-      icon: favicon.ico
-      iconHeight: 18
 
 markup:
     goldmark:

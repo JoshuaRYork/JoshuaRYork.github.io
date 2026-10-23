@@ -17,12 +17,13 @@
 {{- print " dark" }}
 {{- end -}}
 " id="top">
-    {{- if not .IsHome  }}
     {{- partialCached "header.html" . .Page -}}
-    {{- end }}
-    <main class="main">
-        {{- block "main" . }}{{ end }}
-    </main>
+    <div class="page-layout">
+        {{- partialCached "sidebar.html" . }}
+        <main class="main">
+            {{- block "main" . }}{{ end }}
+        </main>
+    </div>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 </body>
 </html>
