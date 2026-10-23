@@ -2,3 +2,6 @@
 public/
 resources/
 .hugo_build.lock
+
+# Stata MCP debug files
+.statamcp/
