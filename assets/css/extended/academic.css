@@ -309,6 +309,8 @@ a.sidebar-icon:hover {
 .home-about .post-content p {
     text-align: justify;
     hyphens: auto;
+    line-height: 1.2; /* single spacing */
+    margin-bottom: 1em; /* keep a blank line between paragraphs */
 }
 
 .home-about .post-title {
