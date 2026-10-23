@@ -17,7 +17,7 @@
     --link-underline: #a5c3f3;
     --link-hover: #2b62c4;
     --site-width: 1440px;
-    --sidebar-width: 200px;
+    --sidebar-width: 240px;
     --main-width: none;
     --header-height: 64px;
     --textsize: 17px;
@@ -56,17 +56,17 @@ body,
     border-bottom: 1px solid var(--border);
 }
 
+/* Menu only, centered; the name already appears in the sidebar */
 .nav {
     max-width: var(--site-width);
     margin: 0 auto;
     background: none;
     line-height: var(--header-height);
+    justify-content: center;
 }
 
-.logo a {
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--primary);
+.logo {
+    display: none;
 }
 
 #menu a {
@@ -101,10 +101,11 @@ body,
 }
 
 .sidebar-avatar {
-    width: 160px;
-    height: 160px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 0;
     border: 1px solid var(--border);
     padding: 4px;
     margin-bottom: 16px;
@@ -160,7 +161,7 @@ body,
     max-width: var(--main-width);
     margin: 0;
     padding: 0;
-    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 32px);
+    min-height: 0;
 }
 
 /* ---------- Page content ---------- */
@@ -274,8 +275,8 @@ body,
     }
 
     .sidebar-avatar {
-        width: 88px;
-        height: 88px;
+        width: 120px;
+        height: 120px;
         margin-bottom: 0;
     }
 

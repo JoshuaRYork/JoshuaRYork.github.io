@@ -52,7 +52,7 @@ params:
     sidebar:
           name: Joshua York
           bio: "Assistant Professor of Economics, Grand Valley State University"
-          imageUrl: HS_GVSU_HiRes.jpg
+          imageUrl: headshot.jpg
 
     # Sidebar contact links: name picks the icon (see layouts/partials/svg.html), title is the label
     socialIcons:

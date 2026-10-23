@@ -1,7 +1,7 @@
 {{- with site.Params.sidebar }}
 <aside class="sidebar">
     {{- with .imageUrl }}
-    <img class="sidebar-avatar" src="{{ . | absURL }}" alt="{{ site.Params.sidebar.name | default site.Title }}" width="160" height="160">
+    <img class="sidebar-avatar" src="{{ . | absURL }}" alt="{{ site.Params.sidebar.name | default site.Title }}" width="240" height="240">
     {{- end }}
     <div class="sidebar-text">
         <h2 class="sidebar-name">{{ .name | default site.Title }}</h2>
