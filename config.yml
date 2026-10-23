@@ -74,7 +74,7 @@ params:
           color: "#000000"
         - name: GoogleScholar
           title: Google Scholar
-          url: "https://scholar.google.com/citations?user=rWHtkgkAAAAJ&hl=en"
+          url: "https://scholar.google.com/citations?user=pChRFrEAAAAJ&hl=en"
           color: "#4285f4"
         - name: CV
           title: CV
