@@ -14,15 +14,15 @@
     --code-bg: #f4f4f5;
     --accent: #b3114b;
     --link: #4a86e8;
-    --link-underline: #a5c3f3;
+    --link-underline: var(--link);
     --link-hover: #2b62c4;
     --site-width: none;
     --sidebar-width: 240px;
     --main-width: none;
     --header-height: 64px;
-    --textsize: 17px;
-    --h1size: 28px;
-    --headersize: 17px;
+    --textsize: 21.25px;
+    --h1size: 35px;
+    --headersize: 21.25px;
     --lineheight: 1.6;
 }
 
@@ -38,6 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 22.5px; /* theme's 18px base scaled by 1.25 */
 }
 
 /* White boxes for page content and list entries, as on weizhang-econ.github.io */
@@ -121,14 +122,14 @@ body {
 }
 
 .sidebar-name {
-    font-size: 19px;
+    font-size: 23.75px;
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 4px;
 }
 
 .sidebar-bio {
-    font-size: 14px;
+    font-size: 17.5px;
     color: var(--secondary);
     margin-bottom: 16px;
 }
@@ -137,7 +138,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 17.5px;
 }
 
 .sidebar-links li {
@@ -238,7 +239,7 @@ body {
 }
 
 .entry-header h2 {
-    font-size: 21px;
+    font-size: 26.25px;
     font-weight: 600;
     color: var(--primary);
 }
