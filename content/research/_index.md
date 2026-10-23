@@ -28,7 +28,7 @@ hideList: true
 
   <article>
     <h3>Practitioner's Guide: Interview Dates of Respondents in the Michigan Survey of Consumers</h3>
-    <p class="abstract">While preliminary, I am working on a guide to constructing and using the interview dates of MSC respondents that are utilized in my job market paper. My intent is to increase the accessibility of these interview dates for future researchers. If you're interested in knowing more while this guide is being written, please feel free to reach out via <a href="mailto:yorkj1@gvsu.edu">email</a>.</p>
+    <p class="abstract">The public microdata of the Michigan Survey of Consumers (MSC) record only the survey month in which each response appears, but the release files archived at the Inter-university Consortium for Political and Social Research (ICPSR) also record when each interview took place. This guide documents how to recover those interview dates from the 516 monthly ICPSR releases between January 1978 and December 2020, which come in four file formats and store the date in different variables over time, the edits needed to make the releases consistent, and how the dates are matched to the public microdata. Of the 277,642 MSC interviews from June 1979 through December 2020, 277,607 (99.99 percent) are matched to their exact interview date. My intent is to make these dates, which underlie my job market paper, accessible to future researchers. If you're interested in knowing more while this guide is being written, please feel free to reach out via <a href="mailto:yorkj1@gvsu.edu">email</a>.</p>
     <p>Early work in progress</p>
   </article>
 </section>
