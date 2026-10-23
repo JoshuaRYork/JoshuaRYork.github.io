@@ -15,7 +15,7 @@ hideList: true
     <ul class="courses">
       <li><span>ECO 210: Introductory Macroeconomics (UG)</span></li>
       <li><span>ECO 302/313: Business Cycles and Growth (UG)</span></li>
-      <li><span>ECO 495: Senior Economic Project (UG)</span></li>
+      <li><span>ECO 495: Economic Capstone (UG)</span></li>
     </ul>
   </article>
 
