@@ -382,6 +382,41 @@ a.sidebar-icon:hover {
     line-height: 1.2;
 }
 
+/* Teaching: one course per row, role in italics below, term on the right */
+.post-content .papers ul.courses {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+.post-content .papers ul.courses li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 16px;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 18.8px;
+    line-height: 1.2;
+}
+
+.post-content .papers ul.courses li span {
+    color: var(--content);
+}
+
+.post-content .papers ul.courses li em {
+    grid-row: 2;
+    color: #626b75;
+    font-size: 16.5px;
+}
+
+.post-content .papers ul.courses li time {
+    grid-column: 2;
+    grid-row: 1;
+    color: #626b75;
+    text-align: right;
+    white-space: nowrap;
+}
+
 /* Abstracts shown in full under each paper */
 .post-content .papers p.abstract {
     margin-top: 10px;
