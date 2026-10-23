@@ -4,7 +4,8 @@
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
-{{- if not .IsHome | and .Title }}
+{{- /* hideTitle: the page's own section headings replace the page title */}}
+{{- if not .IsHome | and .Title | and (not .Params.hideTitle) }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
   <h1>
@@ -25,6 +26,11 @@
 {{- end }}
 
 {{- $pages := union .RegularPages .Sections }}
+
+{{- /* hideList: the page content lists its entries itself */}}
+{{- if .Params.hideList }}
+{{- $pages = slice }}
+{{- end }}
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
