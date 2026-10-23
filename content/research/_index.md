@@ -21,6 +21,12 @@ hideList: true
   </article>
 
   <article>
+    <h3>Household Inflation Expectations and the News</h3>
+    <p class="abstract">How does news coverage shape the distribution of household inflation expectations, and not just their level? This paper links daily Wall Street Journal news coverage across 180 topics, measured by Bybee et al. (2021), to the interview dates of roughly 63,000 responses to the Federal Reserve Bank of New York's Survey of Consumer Expectations between June 2013 and June 2017. Because respondents assign probabilities to ranges of future inflation, I measure each household's subjective distribution, including its mean, its uncertainty, and the weight placed on the upper and lower tails, and ask which types of news move them. Daily data allow sharper identification than the monthly or quarterly frequencies common in the literature, and the breadth of topics allows comparisons such as whether oil market coverage shifts expectations into the tails more than monetary policy or political news.<br>Results forthcoming.</p>
+    <p>Work in progress</p>
+  </article>
+
+  <article>
     <h3>Practitioner's Guide: Interview Dates of Respondents in the Michigan Survey of Consumers</h3>
     <p class="abstract">While preliminary, I am working on a guide to constructing and using the interview dates of MSC respondents that are utilized in my job market paper. My intent is to increase the accessibility of these interview dates for future researchers. If you're interested in knowing more while this guide is being written, please feel free to reach out via <a href="mailto:yorkj1@gvsu.edu">email</a>.</p>
     <p>Early work in progress</p>
