@@ -168,6 +168,7 @@ body {
 .sidebar-links li {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 8px;
     white-space: nowrap;
 }
@@ -354,6 +355,11 @@ a.sidebar-icon:hover {
 
     .sidebar-links li {
         margin-bottom: 4px;
+    }
+
+    /* Justified text leaves large gaps in a narrow column */
+    .home-about .post-content p {
+        text-align: left;
     }
 
     .main {

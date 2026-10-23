@@ -9,4 +9,4 @@ My research focuses on how households form expectations, specifically about infl
 
 I earned my Ph.D. in economics from Texas A&M University in May 2024. Aligned with my research interests, I teach undergraduate macroeconomics as well as the economics capstone course. Before my doctorate, I earned a B.S. in economics from Purdue University, an M.S. in economics from the University of Wisconsin–Madison, and spent time as a research economist for the White House Council of Economic Advisers.
 
-Please feel free to contact me via [email](mailto:yorkj1@gvsu.edu) or on [Twitter/X](https://x.com/Joshua_R_York).
+Please feel free to contact me!
