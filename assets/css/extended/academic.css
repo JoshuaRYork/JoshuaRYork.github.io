@@ -10,7 +10,7 @@
     --secondary: #52525b;
     --tertiary: #e4e4e7;
     --border: #e5e7eb;
-    --page-bg: #f5f5f5;
+    --page-bg: #ffffff;
     --code-bg: #f4f4f5;
     --accent: #b3114b;
     --link: #4a86e8;
@@ -250,6 +250,25 @@ body {
 .entry-content,
 .entry-footer {
     color: var(--secondary);
+}
+
+/* ---------- Home page: plain text column, as on academicpages.github.io ---------- */
+
+.page-layout:has(.home-about) {
+    gap: 60px;
+}
+
+.home-about {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    max-width: 760px;
+}
+
+.home-about .post-title {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 /* ---------- Footer ---------- */
