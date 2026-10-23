@@ -160,9 +160,7 @@ body {
 
 .sidebar-affiliation a {
     color: var(--link);
-    text-decoration: underline;
-    text-decoration-color: var(--link-underline);
-    text-underline-offset: 3px;
+    text-decoration: none;
 }
 
 .sidebar-affiliation a:hover {
@@ -242,19 +240,17 @@ a.sidebar-icon:hover {
 }
 
 .post-content a,
+.post-meta a,
 .page-header a,
 .footer a {
     color: var(--link);
     box-shadow: none;
-    text-decoration: underline;
-    text-decoration-color: var(--link-underline);
-    text-underline-offset: 3px;
+    text-decoration: none; /* links are marked by color only */
 }
 
 .post-content a:hover,
 .footer a:hover {
     color: var(--link-hover);
-    text-decoration-color: currentColor;
 }
 
 .post-content h2,

@@ -16,7 +16,7 @@
         </p>
         {{- end }}
         <ul class="sidebar-links">
-            {{- range site.Params.socialIcons }}
+            {{- range where site.Params.socialIcons "hidden" "!=" true }}
             {{- $external := or (hasPrefix (.url | default "") "http") (hasPrefix (.iconUrl | default "") "http") }}
             <li>
                 {{- if .url }}

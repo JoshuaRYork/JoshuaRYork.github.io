@@ -57,9 +57,11 @@ params:
           imageUrl: headshot.jpg
 
     # Sidebar contact links: name picks the icon (see layouts/partials/svg.html), title is the label.
-    # url links the whole line; iconUrl links only the icon; color sets the icon color.
+    # url links the whole line; iconUrl links only the icon; color sets the icon color;
+    # hidden: true keeps an entry here without showing it.
     socialIcons:
         - name: Location
+          hidden: true
           title: SCB 3120, Seidman College of Business
           iconUrl: "https://www.google.com/maps/search/?api=1&query=L.+William+Seidman+Center,+50+Front+Ave+SW,+Grand+Rapids,+MI+49504"
         - name: Email
