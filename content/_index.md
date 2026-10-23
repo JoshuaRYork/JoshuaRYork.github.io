@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Me"
 description: "Joshua York, assistant professor of economics at Grand Valley State University, studies household inflation expectations and monetary policy."
 ---
 
