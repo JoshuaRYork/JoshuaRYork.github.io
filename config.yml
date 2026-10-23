@@ -64,6 +64,9 @@ params:
         - name: X
           title: "@Joshua_R_York"
           url: https://x.com/Joshua_R_York
+        - name: GoogleScholar
+          title: Google Scholar
+          url: "https://scholar.google.com/citations?user=rWHtkgkAAAAJ&hl=en"
         - name: CV
           title: CV (PDF)
           url: CVweb.pdf
