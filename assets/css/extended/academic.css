@@ -17,7 +17,8 @@
     --link-underline: var(--link);
     --link-hover: #2b62c4;
     --site-width: none;
-    --sidebar-width: 310px;
+    --sidebar-width: 370px;
+    --sidebar-text: 21.25px; /* one size for every line under the name */
     --main-width: none;
     --header-height: 64px;
     --textsize: 21.25px;
@@ -138,7 +139,7 @@ body {
 
 .sidebar-bio,
 .sidebar-affiliation {
-    font-size: 17.5px;
+    font-size: var(--sidebar-text);
     color: var(--secondary);
     margin-bottom: 2px;
 }
@@ -162,7 +163,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 17.5px;
+    font-size: var(--sidebar-text);
 }
 
 .sidebar-links li {
@@ -343,6 +344,7 @@ a.sidebar-icon:hover {
 
     /* Stack photo, name and links in one centered column */
     .sidebar {
+        --sidebar-text: 18.5px; /* largest size that keeps the address on one line */
         position: static;
         flex-basis: auto;
         align-self: center;
