@@ -8,15 +8,30 @@
         {{- with .bio }}
         <p class="sidebar-bio">{{ . | markdownify }}</p>
         {{- end }}
+        {{- with .affiliation }}
+        <p class="sidebar-affiliation">
+            {{- with site.Params.sidebar.affiliationUrl }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+            {{- . -}}
+            {{- with site.Params.sidebar.affiliationUrl }}</a>{{ end -}}
+        </p>
+        {{- end }}
         <ul class="sidebar-links">
             {{- range site.Params.socialIcons }}
+            {{- $external := or (hasPrefix (.url | default "") "http") (hasPrefix (.iconUrl | default "") "http") }}
             <li>
                 {{- if .url }}
-                <a href="{{ trim .url " " | absURL }}" {{- if hasPrefix .url "http" }} target="_blank" rel="noopener noreferrer me"{{ end }}>
-                    {{ partial "svg.html" . }}<span>{{ .title | default .name }}</span>
+                <a href="{{ trim .url " " | absURL }}" {{- if $external }} target="_blank" rel="noopener noreferrer me"{{ end }}>
+                    <span class="sidebar-icon" {{- with .color }} style="color: {{ . | safeCSS }}"{{ end }}>{{ partial "svg.html" . }}</span><span>{{ .title | default .name }}</span>
                 </a>
                 {{- else }}
-                {{ partial "svg.html" . }}<span>{{ .title | default .name }}</span>
+                {{- if .iconUrl }}
+                <a class="sidebar-icon" href="{{ .iconUrl }}" title="{{ .title | default .name }}" aria-label="{{ .name }}: {{ .title }}"
+                    {{- with .color }} style="color: {{ . | safeCSS }}"{{ end }}
+                    {{- if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ partial "svg.html" . }}</a>
+                {{- else }}
+                <span class="sidebar-icon" {{- with .color }} style="color: {{ . | safeCSS }}"{{ end }}>{{ partial "svg.html" . }}</span>
+                {{- end }}
+                <span>{{ .title | default .name }}</span>
                 {{- end }}
             </li>
             {{- end }}

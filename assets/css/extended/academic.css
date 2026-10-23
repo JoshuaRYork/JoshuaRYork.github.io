@@ -17,7 +17,7 @@
     --link-underline: var(--link);
     --link-hover: #2b62c4;
     --site-width: none;
-    --sidebar-width: 240px;
+    --sidebar-width: 310px;
     --main-width: none;
     --header-height: 64px;
     --textsize: 21.25px;
@@ -111,27 +111,51 @@ body {
 }
 
 .sidebar-avatar {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
+    display: block;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
     border-radius: 0;
     border: 1px solid var(--border);
     padding: 4px;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
+}
+
+/* Name, title and university are centered under the photo, one line each */
+.sidebar-name,
+.sidebar-bio,
+.sidebar-affiliation {
+    text-align: center;
+    white-space: nowrap;
 }
 
 .sidebar-name {
-    font-size: 23.75px;
+    font-size: 30px;
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 4px;
 }
 
-.sidebar-bio {
+.sidebar-bio,
+.sidebar-affiliation {
     font-size: 17.5px;
     color: var(--secondary);
-    margin-bottom: 16px;
+    margin-bottom: 2px;
+}
+
+.sidebar-affiliation {
+    margin-bottom: 18px;
+}
+
+.sidebar-affiliation a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-color: var(--link-underline);
+    text-underline-offset: 3px;
+}
+
+.sidebar-affiliation a:hover {
+    color: var(--link-hover);
 }
 
 .sidebar-links {
@@ -145,6 +169,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    white-space: nowrap;
 }
 
 .sidebar-links a {
@@ -157,12 +182,25 @@ body {
     text-decoration: underline;
 }
 
-.sidebar-links svg {
+.sidebar-icon {
+    display: inline-flex;
     flex: 0 0 auto;
-    width: 16px;
-    height: 16px;
     margin-inline-end: 8px;
     color: var(--secondary);
+}
+
+/* Icon-only links (map, email) */
+.sidebar-links a.sidebar-icon {
+    color: var(--secondary);
+}
+
+a.sidebar-icon:hover {
+    opacity: 0.7;
+}
+
+.sidebar-links svg {
+    width: 16px;
+    height: 16px;
 }
 
 .main {
@@ -264,7 +302,12 @@ body {
     border: none;
     border-radius: 0;
     padding: 0;
-    max-width: 760px;
+    max-width: 880px;
+}
+
+.home-about .post-content p {
+    text-align: justify;
+    hyphens: auto;
 }
 
 .home-about .post-title {
@@ -295,20 +338,18 @@ body {
         padding-top: 20px;
     }
 
+    /* Stack photo, name and links in one centered column */
     .sidebar {
         position: static;
-        display: flex;
-        align-items: center;
-        gap: 16px;
         flex-basis: auto;
+        align-self: center;
         padding-bottom: 20px;
         border-bottom: 1px solid var(--border);
     }
 
     .sidebar-avatar {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 0;
+        width: 180px;
+        height: 180px;
     }
 
     .sidebar-links li {
