@@ -12,8 +12,11 @@ taxonomies:
 
 menu:
     main:
+        - name: Home
+          url: /
+          weight: 1
         - name: CV
-          url: cv/
+          url: CVweb.pdf
           weight: 5 
         - name: Research
           url: research/
