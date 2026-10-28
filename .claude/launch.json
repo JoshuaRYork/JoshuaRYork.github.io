@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "hugo-1320",
-      "runtimeExecutable": "C:\\Users\\jryor\\AppData\\Local\\Temp\\claude\\C--Users-jryor-Documents-GitHub-JoshuaRYork-github-io\\6f8119ee-5b09-4be5-bc83-48f556d91c29\\scratchpad\\hugo\\hugo.exe",
+      "runtimeExecutable": "C:\\Users\\jryor\\AppData\\Local\\Temp\\hugo-jy\\hugo.exe",
       "runtimeArgs": ["server", "--port", "1320", "--disableFastRender"],
       "port": 1320
     }
